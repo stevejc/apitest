@@ -106,5 +106,5 @@ Created_at:
 * Format is: YYYY-MM-DD HH:MM:SS
 
 Updated_at:
- * This field is a datetime.
- * Format is: YYYY-MM-DD HH:MM:SS
+* This field is a datetime.
+* Format is: YYYY-MM-DD HH:MM:SS
