@@ -13,7 +13,7 @@ class Api::PagesController < ApplicationController
 
   def new
     @page = Page.new
-    render_with @page
+    respond_with @page
   end
 
   def edit
@@ -23,25 +23,25 @@ class Api::PagesController < ApplicationController
   def create
     @page = Page.new(params[:page])
     if @page.save
-      render_with @page
+      respond_with @page
     else
-      render_with @page.errors, status: :unprocessable_entity
+      respond_with @page.errors, status: :unprocessable_entity
     end
   end
 
   def update
     @page = Page.find(params[:id])
     if @page.update_attributes(params[:page])
-      render_with @page
+      respond_with @page
     else
-      render_with @page.errors, status: :unprocessable_entity
+      respond_with @page.errors, status: :unprocessable_entity 
     end
   end
 
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    respond_with [:api, @page]
+    respond_with @page
   end
   
   def published
