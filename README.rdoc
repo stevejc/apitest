@@ -1,0 +1,100 @@
+== Welcome to the API for Pages
+
+This application can be accessed via xml and json.
+
+You are able to view all pages, view the details of each page, add new pages, edit existing pages, delete pages, publish pages, view a list of published pages in descending order, view a list of unpublished pages in descending order, and get the total number of words for any page.
+
+== Getting Started
+
+1. To get a list of all pages, use the following url:
+       https://0.0.0.0:3000/api/pages and add either .json or .xml based on your requirements.
+
+			[
+			{
+			content: "Sports are big",
+			created_at: "2013-05-31T18:55:04Z",
+			id: 2,
+			published_on: "2013-05-31T18:54:00Z",
+			title: "Sports",
+			updated_at: "2013-05-31T19:15:03Z"
+			},
+			{
+			content: "business is key",
+			created_at: "2013-05-31T18:56:02Z",
+			id: 3,
+			published_on: null,
+			title: "Business",
+			updated_at: "2013-05-31T18:56:02Z"
+			}
+			]
+
+2. To get all information about a specific page, use the following url
+       https://0.0.0.0:3000/api/pages/(:id) and add either .json or .xml based on your requirements. Replace the :id with id of the page you want to view.
+
+		   This is a sample of what will be returned:
+
+					{
+					content: "Sports are big",
+					created_at: "2013-05-31T18:55:04Z",
+					id: 2,
+					published_on: "2013-05-31T18:54:00Z",
+					title: "Sports",
+					updated_at: "2013-05-31T19:15:03Z"
+					}
+
+3. To add a new page, use the following url:
+       https://0.0.0.0:3000/api/pages/new
+
+4. To add a edit a specific page, use the following url:
+       https://0.0.0.0:3000/api/pages/new
+
+5. To delete a page, use the following url:
+       https://0.0.0.0:3000/api/pages/new
+
+6. To view all published pages in descending order, use the following url
+       https://0.0.0.0:3000/api/pages/unpublished and add either .json or .xml based on your requirements.
+
+7. To view all unpublished pages in descending order, use the following url
+       https://0.0.0.0:3000/api/pages/published and add either .json or .xml based on your requirements.
+
+8. To publish a specific page, use the following url
+       https://0.0.0.0:3000/api/pages/(:id)/publish and add either .json or .xml based on your requirements.
+
+9. To get the total word count for the title and content for a specific page, use the following url:
+			https://0.0.0.0:3000/api/pages/(:id)/total_words and add either .json or .xml based on your requirements.
+			
+	 This is a sample of what will be returned:
+	
+      { id: 2, word_count: 4 }
+			
+
+== Data Fields
+
+The application includes 1 model, Page. The following fields are included in the Page model:
+
+1. title:
+	A. This field is required.
+	B. This field must be unique.
+	C. This field is a string.
+	
+2. content:
+	A. This field is required.
+	B. This field is a string.
+	
+3. published_on:
+	A. This field is a datetime.
+	B. Format is: YYYY-MM-DD HH:MM:SS
+	
+4. id:
+  A. This field is an integer.
+
+5. created_at:
+  A. This field is a datetime.
+  B. Format is: YYYY-MM-DD HH:MM:SS
+
+6. updated_at:
+  A. This field is a datetime.
+  B. Format is: YYYY-MM-DD HH:MM:SS
+
+
+
