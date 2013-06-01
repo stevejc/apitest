@@ -85,26 +85,26 @@ You are able to view all pages, view the details of each page, add new pages, ed
 
 The application includes 1 model, Page. The following fields are included in the Page model:
 
-1. title:
+Title:
 * This field is required.
 * This field must be unique.
 * This field is a string.
 	
-2. content:
+Content:
 * This field is required.
 * This field is a string.
 	
-3. published_on:
+Published_on:
 * This field is a datetime.
 * Format is: YYYY-MM-DD HH:MM:SS
 	
-4. id:
+Id:
 * This field is an integer.
 
-5. created_at:
+Created_at:
 * This field is a datetime.
 * Format is: YYYY-MM-DD HH:MM:SS
 
-6. updated_at:
+Updated_at:
  * This field is a datetime.
  * Format is: YYYY-MM-DD HH:MM:SS
